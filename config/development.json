@@ -1,0 +1,15 @@
+{
+  "basepath": "/",
+  "url": "devfest.gdg.london/",
+  "analytics": "UA-43643469-9",
+  "prefix": "/",
+  "firebase": {
+    "apiKey": "AIzaSyDIrCHQ6umL13iLqe4al0XIYV3MYD3qjKY",
+    "authDomain": "gdg-devfest-london-2019.firebaseapp.com",
+    "databaseURL": "https://gdg-devfest-london-2019.firebaseio.com",
+    "projectId": "gdg-devfest-london-2019",
+    "storageBucket": "gdg-devfest-london-2019.appspot.com",
+    "messagingSenderId": "257288313104"
+  },
+  "googleMapApiKey": "AIzaSyBIOQRtCnIgdWRGO2r8pSjYIJj3u-jcvLw"
+}

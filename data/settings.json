@@ -1,0 +1,155 @@
+{
+  "organizer": {
+    "name": "GDG London",
+    "twitter": "GDGLondon",
+    "blog": "https://www.meetup.com/gdglondon/",
+    "url": "https://www.meetup.com/gdglondon/"
+  },
+  "startDate": "2019-11-16T09:00:00+00:00",
+  "endDate": "2019-11-16T19:00:00+00:00",
+  "webapp": {
+    "shortName": "DevFest",
+    "themeColor": "#174EA6",
+    "backgroundColor": "#174EA6"
+  },
+    "dateFormat": {
+    "locale": "en-US"
+  },
+  "hashtag": "DevFest19",
+  "disabledSchedule": true,
+  "showSessionShortAbstract": true,
+  "navigation": [
+    {
+      "route": "home",
+      "permalink": "/",
+      "label": "Home"
+    },
+    {
+      "route": "team",
+      "permalink": "/team/",
+      "label": "Team"
+    }
+  ],
+  "heroSettings": {
+    "home": {
+      "description": "Be a hero. Be a GDG!",
+      "background": {
+        "color": "#174EA6",
+        "image": "/images/backgrounds/home.jpg"
+      },
+      "fontColor": "#FFF"
+    },
+    "team": {
+      "title": "Team",
+      "metaDescription": "Get more info about organizers",
+      "background": {
+        "color": "#fff"
+      },
+      "fontColor": "#424242"
+    },
+    "faq": {
+      "title": "FAQs",
+      "metaDescription": "Find your answer right here!",
+      "background": {
+        "color": "#fff"
+      },
+      "fontColor": "#424242"
+    },
+    "cod": {
+      "title": "Code Of Conduct",
+      "metaDescription": "Lear more about our expectations for all those who participate in our community",
+      "background": {
+        "color": "#fff"
+      },
+      "fontColor": "#424242"
+    }
+  },
+  "location": {
+    "label": "Location",
+    "name": "King's College London",
+    "city": "London",
+    "short": "London, UK",
+    "address": "Strand, London WC2R 2LS",
+    "pointer": {
+      "latitude": 51.5114763,
+      "longitude": -0.118212,
+      "zoom": 15
+    },
+    "mapCenter": {
+      "latitude": 51.5114763,
+      "longitude": -0.118212
+    },
+    "description": "Architecturally significant university, built in 1831 and housing the school of Arts and Humanities."
+  },
+  "mediaQueries": {
+    "xs": {
+      "max": "639px"
+    },
+    "sm": {
+      "min": "640px",
+      "max": "811px"
+    },
+    "md": {
+      "min": "812px",
+      "max": "1023px"
+    },
+    "lg": {
+      "min": "1024px"
+    }
+  },
+  "socialNetwork": {
+    "follow": [
+      {
+        "name": "twitter",
+        "url": "https://twitter.com/gdglondon/"
+      }, {
+        "name": "facebook",
+        "url": "https://www.facebook.com/gdglondon/"
+      }, {
+        "name": "instagram",
+        "url": "https://www.instagram.com/GDGLondon"
+      }
+    ],
+    "share": [
+      {
+        "name": "facebook",
+        "url": "https://www.facebook.com/sharer.php?u=https://devfest.gdg.london"
+      }, {
+        "name": "twitter",
+        "url": "https://twitter.com/intent/tweet?text=https://devfest.gdg.london"
+      }
+    ]
+  },
+  "mailto": "hello@gdg.london",
+  "signInProviders": {
+    "providersData": [
+      {
+        "name": "google",
+        "label": "Sign in with Google",
+        "url": "https://accounts.google.com"
+      }
+    ],
+    "allowedProvidersUrl": [
+      "https://accounts.google.com",
+      "https://www.facebook.com",
+      "https://twitter.com"
+    ]
+  },
+  "contentLoaders": {
+    "schedule": {
+      "itemsCount": 2
+    },
+    "blog": {
+      "itemsCount": 3
+    },
+    "speakers": {
+      "itemsCount": 4
+    },
+    "previousSpeakers": {
+      "itemsCount": 6
+    },
+    "tickets": {
+      "itemsCount": 5
+    }
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "gallery" : [
+    "https://firebasestorage.googleapis.com/v0/b/gdg-devfest-london-2018.appspot.com/o/DevFest17%2Fdf1.jpg?alt=media&token=92311af9-e435-457e-af3b-9756b5124953",
+    "https://firebasestorage.googleapis.com/v0/b/gdg-devfest-london-2018.appspot.com/o/DevFest17%2Fdf2.jpg?alt=media&token=ca00ee5a-6028-4966-bb0c-98dd2cb1dddd",
+    "https://firebasestorage.googleapis.com/v0/b/gdg-devfest-london-2018.appspot.com/o/DevFest17%2Fdf3.jpg?alt=media&token=7c0e671d-9767-48bd-9725-adaef6c300bd",
+    "https://firebasestorage.googleapis.com/v0/b/gdg-devfest-london-2018.appspot.com/o/DevFest17%2Fdf4.jpg?alt=media&token=81ce45b5-72ce-4dce-b4b4-ac2e0072f153",
+    "https://firebasestorage.googleapis.com/v0/b/gdg-devfest-london-2018.appspot.com/o/DevFest17%2Fdf5.jpg?alt=media&token=79434bb4-1e0c-4e26-819f-56b01674d0db",
+    "https://firebasestorage.googleapis.com/v0/b/gdg-devfest-london-2018.appspot.com/o/DevFest17%2Fdf6.jpg?alt=media&token=50bc0af5-51c8-4e3b-bbb3-674f4555fe11",
+    "https://firebasestorage.googleapis.com/v0/b/gdg-devfest-london-2018.appspot.com/o/DevFest17%2Fdf7.jpg?alt=media&token=42b1b088-8986-4d45-ab59-6fec06adba00",
+    "https://firebasestorage.googleapis.com/v0/b/gdg-devfest-london-2018.appspot.com/o/DevFest17%2Fdf8.jpg?alt=media&token=2dfc2325-0fbf-4a4a-9a3b-5ec8f7c86e5d"
+  ],
+  "notifications" : {
+    "config" : {
+      "icon" : "",
+      "timezone" : "+00:00"
+    },
+    "messages" : { },
+    "subscribers" : { },
+    "test" : { },
+    "users" : { }
+  },
+  "partners" : [ {
+    "logos" : [ {
+      "order" : 0,
+      "logoUrl" : "https://firebasestorage.googleapis.com/v0/b/gdg-devfest-london-2019.appspot.com/o/logos%2Fgdg_london.svg?alt=media&token=b1f08114-b2ba-4380-9f57-da479f08309f",
+      "name" : "GDG London",
+      "url" : "https://www.meetup.com/gdglondon"
+    } ],
+    "order" : 0,
+    "title" : "Organizer"
+  }, {
+    "logos" : [ {
+      "order" : 0,
+      "logoUrl" : "https://firebasestorage.googleapis.com/v0/b/gdg-devfest-london-2019.appspot.com/o/logos%2Fgoogle_developers.png?alt=media&token=3038fce4-623e-4229-b755-a0edd2e00329",
+      "name" : "Google Developers",
+      "url" : "https://developers.google.com/"
+    } ],
+    "order" : 1,
+    "title" : "Main Partner"
+  } ],
+  "team" : [
+    {
+      "members": [
+        {
+          "name": "Aygul Zagidullina",
+          "photoUrl": "https://firebasestorage.googleapis.com/v0/b/gdg-devfest-london-2019.appspot.com/o/people%2Faygul.jpg?alt=media&token=e87d7a02-897e-4b00-a755-190643fee7f2",
+          "socials": [
+            {
+              "icon": "website",
+              "link": "http://www.aygul.co/",
+              "name": "Website"
+            },
+            {
+              "icon": "twitter",
+              "link": "https://twitter.com/aygul",
+              "name": "Twitter"
+            },
+            {
+              "icon": "linkedin",
+              "link": "https://linkedin.com/in/aygulzagidullina",
+              "name": "LinkedIn"
+            }
+          ],
+          "order": 1
+        },
+        {
+          "name": "Kaan Mamikoglu",
+          "photoUrl": "https://firebasestorage.googleapis.com/v0/b/gdg-devfest-london-2019.appspot.com/o/people%2Fkaan.jpg?alt=media&token=72763b49-2939-4ab1-9a51-58854620923d",
+          "socials": [
+            {
+              "icon": "website",
+              "link": "http://www.iamkaan.com/",
+              "name": "Website"
+            },
+            {
+              "icon": "twitter",
+              "link": "http://twitter.com/kaanmamikoglu",
+              "name": "Twitter"
+            },
+            {
+              "icon": "linkedin",
+              "link": "http://linkedin.com/in/iamkaan",
+              "name": "LinkedIn"
+            },
+            {
+              "icon": "github",
+              "link": "http://github.com/iamkaan",
+              "name": "GitHub"
+            }
+          ],
+          "order": 5
+        },
+        {
+          "name": "Gen Ashley",
+          "photoUrl": "https://firebasestorage.googleapis.com/v0/b/gdg-devfest-london-2019.appspot.com/o/people%2Fgen.jpeg?alt=media&token=3560aeb9-f55a-4a5e-b06c-8ad9dfd89c54",
+          "socials": [
+            {
+              "icon": "twitter",
+              "link": "https://twitter.com/coderinheels",
+              "name": "Twitter"
+            }
+          ],
+          "order": 3
+        },
+        {
+          "name": "Busra Deniz",
+          "photoUrl": "https://firebasestorage.googleapis.com/v0/b/gdg-devfest-london-2019.appspot.com/o/people%2Fbusra.png?alt=media&token=7d5f1386-0509-447b-8cbc-31d3b436a6ed",
+          "socials": [
+            {
+              "icon": "twitter",
+              "link": "https://twitter.com/busradeniz",
+              "name": "Twitter"
+            },
+            {
+              "icon": "linkedin",
+              "link": "https://www.linkedin.com/in/busradeniz",
+              "name": "LinkedIn"
+            },
+            {
+              "icon": "website",
+              "link": "http://busradeniz.com",
+              "name": "Website"
+            }
+          ],
+          "order": 2
+        },
+        {
+          "name": "Hawra Milani",
+          "photoUrl": "https://firebasestorage.googleapis.com/v0/b/gdg-devfest-london-2019.appspot.com/o/people%2Fhawra.png?alt=media&token=17486b08-9115-47ee-a5ec-42d7cc2de6bd",
+          "socials": [
+            {
+              "icon": "twitter",
+              "link": "https://twitter.com/HawraMilani",
+              "name": "Twitter"
+            }
+          ],
+          "order": 4
+        }
+      ],
+      "title": "Core Team"
+    }
+  ],
+  "tickets" : [ {
+    "available" : true,
+    "currency" : "£",
+    "ends" : "Oct 6",
+    "inDemand" : true,
+    "name" : "Early Bird",
+    "price" : 20,
+    "regular" : true,
+    "soldOut" : false,
+    "starts" : "Aug 12",
+    "url" : "https://www.meetup.com/gdglondon/events/263614181/"
+  }, {
+    "available" : true,
+    "currency" : "£",
+    "ends" : "Nov 16",
+    "info" : "Requires a valid student/lecturer ID",
+    "name" : "EDU",
+    "price" : 10,
+    "soldOut" : false,
+    "starts" : "Aug 12",
+    "url" : "https://www.meetup.com/gdglondon/events/263614181/"
+  }, {
+    "available" : false,
+    "currency" : "£",
+    "ends" : "Nov 16",
+    "info" : "When you're not early or a bird",
+    "name" : "Regular",
+    "price" : 10,
+    "soldOut" : false,
+    "starts" : "Oct 6",
+    "url" : "https://www.meetup.com/gdglondon/events/263614181/"
+  } ],
+  "triggers" : {
+    "images" : false
+  }
+}

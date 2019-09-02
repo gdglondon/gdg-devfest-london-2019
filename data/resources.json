@@ -1,0 +1,292 @@
+{
+  "title": "GDG DevFest London 2019",
+  "description": "Be a hero. Be a GDG!",
+  "image": "images/social-share.jpg",
+  "keywords": "event, gdg, gde, devfest, google, programming, android, chrome, polymer, developers, web, cloud, androiddev",
+  "dates": "November 16, 2019",
+  "partnershipProposition": "https://forms.gle/kTXQRvYjBaYVnKgN8",
+  "share": "Share",
+  "followOur": "Follow our",
+  "followUs": "Follow us",
+  "emailUs": "Email us",
+  "partnershipResources": "Partnership Resources",
+  "eventResources": "Event Resources",
+  "buyTicket": "Buy ticket",
+  "signIn": "Sign in",
+  "signOut": "Sign out",
+  "cfp": "Call for Papers",
+  "cfpUrl": "https://sessionize.com/gdg-devfest-london-2019/",
+  "offlineMessage": "You can still work offline.",
+  "cachingComplete": "Caching complete! Future visits will work offline.",
+  "newVersionAvailable": "A new version of this app is available.",
+  "refresh": "Refresh",
+  "position": "Position",
+  "country": "Country",
+  "time": "Time",
+  "faq": "/data/faq.md",
+  "cod": "/data/cod.md",
+  "footer": {
+    "blog": "Blog"
+  },
+  "mySchedule": {
+    "title": "My Schedule",
+    "browseSession": "Browse sessions"
+  },
+  "footerRelBlock": [
+    {
+      "title": "About",
+      "links": [
+        {
+          "name": "GDG London",
+          "url": "https://www.meetup.com/gdglondon",
+          "newTab": true
+        },
+        {
+          "name": "Google Developers",
+          "url": "https://developers.google.com/",
+          "newTab": true
+        },
+        {
+          "name": "Meet the Team",
+          "url": "/team/",
+          "newTab": false
+        }
+      ]
+    },
+    {
+      "title": "Explore Past DevFests",
+      "links": [
+        {
+          "name": "DevFest London 2018",
+          "url": "https://gdg-devfest-london-2018.firebaseapp.com/",
+          "newTab": true
+        },
+        {
+          "name": "DevFest London 2017",
+          "url": "https://devfest-london-2017.firebaseapp.com/",
+          "newTab": true
+        },
+        {
+          "name": "DevFest London 2016",
+          "url": "https://devfest-london-2016.firebaseapp.com/",
+          "newTab": true
+        },
+        {
+          "name": "DevFest London 2015",
+          "url": "https://www.meetup.com/gdglondon/events/226632582/",
+          "newTab": true
+        },
+        {
+          "name": "DevFest London 2014",
+          "url": "https://www.meetup.com/gdglondon/events/213763042/",
+          "newTab": true
+        },
+        {
+          "name": "DevFest London 2013",
+          "url": "https://www.eventbrite.co.uk/e/gdg-devfest-london-2013-tickets-6834232373",
+          "newTab": true
+        },
+        {
+          "name": "DevFest London 2012",
+          "url": "http://gdglondon.blogspot.com/2012/09/devfest-london-photos-and-hackathon.html",
+          "newTab": true
+        }
+      ]
+    },
+    {
+      "title": "Event Resources",
+      "links": [
+        {
+          "name": "Call for Papers",
+          "url": "https://sessionize.com/gdg-devfest-london-2019/",
+          "newTab": true
+        },
+        {
+          "name": "FAQs",
+          "url": "/faq/",
+          "newTab": false
+        }
+      ]
+    }
+  ],
+  "subscribeNote": "No spam, only the latest news and updates!",
+  "codeOfConduct": "Code of Conduct",
+  "aboutBlock": {
+    "title": "What you need to know, before you ask.",
+    "callToAction": {
+      "featuredSessions": {
+        "description": "Learn about Android, Web, Cloud, Machine Learning and more from world experts.",
+        "label": "Explore schedule",
+        "link": "/schedule/"
+      },
+      "howItWas": {
+        "description": "The largest free community driven tech conference in the UK.",
+        "label": "See how it was in 2018",
+        "photosUrl": "https://photos.app.goo.gl/xH6xVxrnE7KY7DRS7"
+      }
+    },
+    "statisticsBlock": {
+      "attendees": {
+        "label": "Attendees",
+        "number": "1000"
+      },
+      "days": {
+        "label": "Day",
+        "number": "1"
+      },
+      "sessions": {
+        "label": "Sessions",
+        "number": "35"
+      },
+      "tracks": {
+        "label": "Tracks",
+        "number": "4"
+      }
+    }
+  },
+  "ticketsBlock": {
+    "title": "Tickets",
+    "ticketsDetails": "Tickets grant access to all conference sections, coffee breaks, lunch and networking.",
+    "soldOut": "You missed it!",
+    "notAvailableYet": "Not available yet",
+    "save": "Save ${discount}% today"
+  },
+  "partnersBlock": {
+    "title": "Partners",
+    "button": "Become a partner",
+    "form": {
+      "title": "Become a partner!",
+      "submitLabel": "Submit",
+      "fullName": "Full Name",
+      "companyName": "Company Name"
+    },
+    "toast": "We will contact you soon!"
+  },
+  "blog": {
+    "published": "Published",
+    "suggested": "Up next"
+  },
+  "latestPostsBlock": {
+    "title": "The latest news",
+    "callToAction": {
+      "label": "View all stories",
+      "link": "/blog/"
+    }
+  },
+  "speakers": {
+    "skills": "Skills",
+    "previousYears": "Years",
+    "previousYear": "Year"
+  },
+  "speakersBlock": {
+    "title": "Rockstar speakers",
+    "callToAction": {
+      "label": "View all speakers",
+      "link": "/speakers/"
+    }
+  },
+  "previousSpeakersBlock": {
+    "title": "Previous speakers",
+    "callToAction": {
+      "label": "View all",
+      "link": "/previous-speakers/"
+    }
+  },
+  "galleryBlock": {
+    "title": "#DevFest18 #GDGLondon highlights",
+    "description": "Last year's festival built lots of excitement. Check out photos from featured talks, hands-on learning sessions, and after-hours fun.",
+    "callToAction": {
+      "label": "See all photos",
+      "link": "https://photos.app.goo.gl/xH6xVxrnE7KY7DRS7"
+    }
+  },
+  "mapBlock": {
+    "title": "Location"
+  },
+  "subscribeBlock": {
+    "callToAction": {
+      "description": "Get notified about the important conference updates",
+      "label": "Subscribe"
+    },
+    "yourEmail": "Your email",
+    "emailAddress": "Email Address",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "formTitle": "Get the latest updates, insights and news about GDG DevFest London sent to your inbox.",
+    "emailRequired": "Please enter a valid email address.",
+    "subscribe": "Subscribe",
+    "subscribed": "Subscribed",
+    "close": "Close",
+    "generalError": "An error has occurred. Please, try again later.",
+    "toast": "Successfully subscribed!"
+  },
+  "team": {
+    "description": "Google is known all around the world. Everyone is 'googling', checking on 'maps' and communicating in 'gmail'. For simple users, they are services that just works, but not for us. Developers see much more: APIs, scalability issues, complex technology stacks. And that is what GDG is about.<br><br> [Google Developers Group (GDG) London](http://twitter.com/gdglondon) - GDGs are open and volunteer communities that create exciting projects and share experience about Google technologies with a passion.<br><br> Our goal is to organize space to connect the best industry experts with London audience to boost development of IT."
+  },
+  "schedule": {
+    "saveSessionsSignedOut": "Sign in to save sessions"
+  },
+  "sessionDetails": {
+    "contentLevel": "Content level",
+    "viewPresentation": "View presentation",
+    "viewVideo": "View video",
+    "speakers": "Speakers"
+  },
+  "speakerDetails": {
+    "sessions": "Sessions"
+  },
+  "notifications": {
+    "default": "Enable notifications",
+    "enabled": "We will miss you but you can unsubscribe anytime",
+    "blocked": "We can't send you notifications right now. Please enable notifications in your browser",
+    "subscribe": "Subscribe",
+    "unsubscribe": "Unsubscribe",
+    "enable": {
+      "label": "Enable",
+      "link": "https://pushassist.com/knowledgebase/how-to-enable-or-disable-push-notifications-on-chrome-firefox-safari-b/"
+    },
+    "toast": {
+      "title": "Open"
+    }
+  },
+  "aboutOrganizerBlock": {
+    "image": "/images/team.jpg",
+    "blocks": [
+      {
+        "title": "Organizer",
+        "description": "The largest free community driven tech conference in the UK, carefully crafted for you by the Google Developer Group (GDG) community! GDG London is a group of developers passionate about Google technologies with a strong focus on knowledge exchange and networking. Learn about Android, Web, Cloud, Machine Learning and more from world experts.",
+        "callToAction": {
+          "label": "Open team page",
+          "link": "/team"
+        }
+      },
+      {
+        "title": "What is GDG?",
+        "description": "GDGs are open and volunteer communities that create exciting projects and share experience about Google technologies with a passion.",
+        "callToAction": {
+          "label": "Read more",
+          "link": "https://developers.google.com/community/gdg/",
+          "newTab": true
+        }
+      }
+    ]
+  },
+  "signInDialog": {
+    "alreadyHaveAccount": "You already have an account",
+    "alreadyUsed": "You've already used",
+    "signInToContinue": {
+      "part1": "Sign in with",
+      "part2": "to continue."
+    }
+  },
+  "filters": {
+    "title": "Filters",
+    "results": "Results",
+    "tags": "Tags",
+    "complexity": "Complexity",
+    "clear": "Clear all"
+  },
+  "addToHomeScreen": {
+    "cta": "Add to Home Screen"
+  }
+}

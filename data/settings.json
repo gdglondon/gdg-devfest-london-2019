@@ -32,7 +32,7 @@
   ],
   "heroSettings": {
     "home": {
-      "description": "Be a hero. Be a GDG!",
+      "description": "Join us at DevFest London in King's College!",
       "background": {
         "color": "#174EA6",
         "image": "/images/backgrounds/home.jpg"
@@ -79,7 +79,7 @@
       "latitude": 51.5114763,
       "longitude": -0.118212
     },
-    "description": "Architecturally significant university, built in 1831 and housing the school of Arts and Humanities."
+    "description": "King's College is an architecturally significant university founded by King George IV and the Duke of Wellington (then Prime Minister) in 1829."
   },
   "mediaQueries": {
     "xs": {

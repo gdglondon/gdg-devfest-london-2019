@@ -14,8 +14,6 @@
   "buyTicket": "Buy ticket",
   "signIn": "Sign in",
   "signOut": "Sign out",
-  "cfp": "Call for Papers",
-  "cfpUrl": "https://sessionize.com/gdg-devfest-london-2019/",
   "offlineMessage": "You can still work offline.",
   "cachingComplete": "Caching complete! Future visits will work offline.",
   "newVersionAvailable": "A new version of this app is available.",
@@ -96,11 +94,6 @@
     {
       "title": "Event Resources",
       "links": [
-        {
-          "name": "Call for Papers",
-          "url": "https://sessionize.com/gdg-devfest-london-2019/",
-          "newTab": true
-        },
         {
           "name": "FAQs",
           "url": "/faq/",

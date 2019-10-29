@@ -1,7 +1,7 @@
 import { initializeFirebase, firestore } from './firebase-config';
 import 'isomorphic-fetch';
 
-const sessionizeApiId = 'dnnxqlwi';
+const sessionizeApiId = '91y4751j';
 const sessionizeRoot = 'https://sessionize.com/api/v2';
 const speakersPath = `${sessionizeRoot}/${sessionizeApiId}/view/speakers`;
 const sessionsPath = `${sessionizeRoot}/${sessionizeApiId}/view/gridtable`;
@@ -11,8 +11,7 @@ function importSpeakers() {
     .then(response => response.json())
     .then(data => Object.values(data))
     .then(speakers => {
-      return importSpeakersForMobile(speakers)
-        .then(_ => importSpeakersForWebsite(speakers));
+      return importSpeakersForWebsite(speakers);
     });
 }
 
@@ -21,91 +20,9 @@ function importSessions() {
     .then(response => response.json())
     .then(data => Object.values(data))
     .then(schedule => {
-      return importSessionsForMobile(schedule)
-        .then(_ => importSessionsForWebsite(schedule));
+      return importSessionsForWebsite(schedule);
     });
 }
-
-const importSpeakersForMobile = (speakers) => {
-  console.log('\tImporting', speakers.length, 'speakers...');
-
-  const batch = firestore.batch();
-
-  speakers.forEach((speaker) => {
-    const social = [];
-    speaker.links.forEach((link) => {
-      social.push({
-        name: link.title,
-        url: link.url,
-      });
-    });
-    const speakerData = {
-      firstName: speaker.firstName,
-      lastName: speaker.lastName,
-      title: speaker.tagLine,
-      bio: speaker.bio,
-      social: social,
-      imageUrl: speaker.profilePicture,
-    };
-    batch.set(
-      firestore.collection('mobileSpeakers').doc(speaker.id),
-      speakerData,
-    );
-  });
-
-  return batch.commit()
-    .then((results) => {
-      console.log('\tImported data for', results.length, 'speakers');
-      return results;
-    });
-};
-
-const importSessionsForMobile = (schedule) => {
-  console.log('\tImporting sessions...');
-
-  const batch = firestore.batch();
-
-  schedule.forEach((day) => {
-    const rooms = day.rooms;
-    rooms.forEach((room, roomIndex) => {
-      const sessions = room.sessions;
-      sessions.forEach((session) => {
-        let tags = [];
-        if (session.categories.length > 2) {
-          tags = session.categories[2].categoryItems.map(item => item.name.toLowerCase());
-        }
-        const sessionData = {
-          title: session.title,
-          description: session.description,
-          startTime: new Date(session.startsAt),
-          endTime: new Date(session.endsAt),
-          speakers: session.speakers.map(speaker => speaker.id),
-          tags: tags,
-          track: `${room.id}`,
-          trackIndex: roomIndex,
-        };
-        batch.set(
-          firestore.collection('mobileSessions').doc(session.id),
-          sessionData,
-        );
-      });
-
-      const roomData = {
-        name: room.name,
-      };
-      batch.set(
-        firestore.collection('mobileTracks').doc(`${room.id}`),
-        roomData,
-      );
-    });
-  });
-
-  return batch.commit()
-    .then(results => {
-      console.log('\tImported data for', results.length, 'sessions');
-      return results;
-    });
-};
 
 const importSpeakersForWebsite = (speakers) => {
   console.log('\tImporting', speakers.length, 'speakers for website...');

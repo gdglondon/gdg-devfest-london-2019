@@ -9,6 +9,7 @@ export function initializeFirebase() {
       credential: admin.credential.cert(serviceAccount),
     });
     firestore = admin.firestore();
+    firestore.settings({ timestampsInSnapshots: true });
     resolve(firebaseApp);
   });
 }

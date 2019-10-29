@@ -17,16 +17,15 @@ function sessionsSpeakersScheduleMap(sessionsRaw, speakersRaw, scheduleRaw) {
             let innerSessions = [];
 
             const sessionsLen = timeslot.sessions.length;
-            for (let sessionIndex = 0; sessionIndex < sessionsLen; sessionIndex++) {
+            timeslot.sessions.forEach((sessionOnSchedule, sessionIndex) => {
                 let subSessions = [];
 
-                const subSessionsLen = timeslot.sessions[sessionIndex].items.length;
-                for (let subSessionIndex = 0; subSessionIndex < subSessionsLen; subSessionIndex++) {
-                    const sessionId = timeslot.sessions[sessionIndex].items[subSessionIndex];
+                const subSessionsLen = sessionOnSchedule.items.length;
+                sessionOnSchedule.items.forEach((sessionId, subSessionIndex) => {
                     const subsession = sessionsRaw[sessionId];
                     const mainTag = subsession.tags ? subsession.tags[0] : 'General';
-                    const endTimeRaw = timeslot.sessions[sessionIndex].extend
-                        ? day.timeslots[timeslotsIndex + timeslot.sessions[sessionIndex].extend - 1].endTime
+                    const endTimeRaw = sessionOnSchedule.extend
+                        ? day.timeslots[timeslotsIndex + sessionOnSchedule.extend - 1].endTime
                         : timeslot.endTime;
                     const endTime = subSessionsLen > 1
                         ? getEndTime(
@@ -38,7 +37,7 @@ function sessionsSpeakersScheduleMap(sessionsRaw, speakersRaw, scheduleRaw) {
                         )
                         : endTimeRaw;
                     const startTime = subSessionsLen > 1 && subSessionIndex > 0
-                        ? sessions[timeslot.sessions[sessionIndex].items[subSessionIndex - 1]].endTime
+                        ? sessions[sessionOnSchedule.items[subSessionIndex - 1]].endTime
                         : timeslot.startTime;
 
                     if (subsession.tags) {
@@ -71,23 +70,23 @@ function sessionsSpeakersScheduleMap(sessionsRaw, speakersRaw, scheduleRaw) {
                             updateSpeakersSessions(speakersRaw, subsession.speakers, finalSubSession, speakers)
                         );
                     }
-                }
+                });
 
                 const start = `${timeslotsIndex + 1} / ${sessionIndex + 1}`;
                 const end = `${timeslotsIndex +
-                    (timeslot.sessions[sessionIndex].extend || 0) + 1} / ${sessionsLen !== 1
+                    (sessionOnSchedule.extend || 0) + 1} / ${sessionsLen !== 1
                         ? sessionIndex + 2 : Object.keys(extensions).length ? Object.keys(extensions)[0]
                             : tracksNumber + 1}`;
 
-                if (timeslot.sessions[sessionIndex].extend) {
-                    extensions[sessionIndex + 1] = timeslot.sessions[sessionIndex].extend;
+                if (sessionOnSchedule.extend) {
+                    extensions[sessionIndex + 1] = sessionOnSchedule.extend;
                 }
 
                 innerSessions = [...innerSessions, {
                     gridArea: `${start} / ${end}`,
                     items: subSessions,
                 }];
-            }
+            });
 
             for (const [key, value] of Object.entries(extensions)) {
                 if (value === 1) {

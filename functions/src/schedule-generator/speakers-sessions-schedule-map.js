@@ -23,7 +23,7 @@ function sessionsSpeakersScheduleMap(sessionsRaw, speakersRaw, scheduleRaw) {
                 const subSessionsLen = sessionOnSchedule.items.length;
                 sessionOnSchedule.items.forEach((sessionId, subSessionIndex) => {
                     const subsession = sessionsRaw[sessionId];
-                    const mainTag = subsession.tags ? subsession.tags[0] : 'General';
+                    const mainTag = subsession.tags && subsession.tags[0] ? subsession.tags[0] : 'General';
                     const endTimeRaw = sessionOnSchedule.extend
                         ? day.timeslots[timeslotsIndex + sessionOnSchedule.extend - 1].endTime
                         : timeslot.endTime;

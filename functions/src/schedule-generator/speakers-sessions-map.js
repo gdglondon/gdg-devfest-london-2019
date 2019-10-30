@@ -6,7 +6,7 @@ function sessionsSpeakersMap(sessionsRaw, speakersRaw) {
         const sessionId = Object.keys(sessionsRaw)[index];
         const currentSession = sessionsRaw[sessionId];
         const sessionSpeakers = [];
-        const mainTag = currentSession.tags ? currentSession.tags[0] : 'General';
+        const mainTag = currentSession.tags && currentSession.tags[0] ? currentSession.tags[0] : 'General';
 
         currentSession.speakers &&
             currentSession.speakers.forEach(speakerId => {
@@ -25,7 +25,7 @@ function sessionsSpeakersMap(sessionsRaw, speakersRaw) {
                     [...generatedSpeaker.sessions, sessionBySpeaker] :
                     [sessionBySpeaker];
 
-                    speakers[speakerId] = { 
+                    speakers[speakerId] = {
                         ...generatedSpeaker,
                         tags: [...speakerTags],
                         sessions: speakerSessions,

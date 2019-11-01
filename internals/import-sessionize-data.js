@@ -99,7 +99,7 @@ const importSessionsForWebsite = (schedule) => {
           title: session.title,
           description: session.description,
           speakers: session.speakers.map(speaker => speaker.id),
-          tags: tags,
+          tags: tags
         };
         batch.set(
           firestore.collection('sessions').doc(session.id),
@@ -148,6 +148,7 @@ slotsStarting.forEach(slot => {
         startTime: slot.startTime,
         endTime: slot.endTime,
         sessions: slot.sessions,
+        crossTrackSession: crossTrackSession
       });
     });
     });

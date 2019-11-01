@@ -3,6 +3,8 @@ function sessionsSpeakersScheduleMap(sessionsRaw, speakersRaw, scheduleRaw) {
     let sessions = {};
     let speakers = {};
     let scheduleTags = [];
+    const maxGridSize = 10;
+    let unusedGrids = 0;
 
     for (const dayKey of Object.keys(scheduleRaw)) {
         const day = scheduleRaw[dayKey];
@@ -15,12 +17,15 @@ function sessionsSpeakersScheduleMap(sessionsRaw, speakersRaw, scheduleRaw) {
             const timeslot = day.timeslots[timeslotsIndex];
             let innnerSessions = [];
 
-      let startGrid = getTimeslotMinutesFromStart(dayKey, day.timeslots[0].startTime, timeslot.endTime) / 5;
-      let endGrid = getTimeslotMinutesFromStart(dayKey, day.timeslots[0].startTime, timeslot.startTime) / 5 + 1;
+      let startGrid = getTimeslotMinutesFromStart(dayKey, day.timeslots[0].startTime, timeslot.startTime, unusedGrids);
+      let endGrid = getTimeslotMinutesFromStart(dayKey, day.timeslots[0].startTime, timeslot.endTime, unusedGrids) - 1;
+      if (timeslot.crossTrackSession && endGrid - startGrid > maxGridSize) {
+        endGrid = (startGrid + maxGridSize) - 1;
+      }
       var timeslotGridSize = `${startGrid} / 1 / ${endGrid} / 2`;
 
       for (
-        let sessionIndex = 0, sessionsLen = timeslot.sessions ? (timeslot.sessions.length ? timeslot.sessions.length : 5) : 0;
+        let sessionIndex = 0, sessionsLen = timeslot.sessions ? (timeslot.sessions.length ? timeslot.sessions.length : 6) : 0;
         sessionIndex < sessionsLen;
         sessionIndex++
       ) {
@@ -83,12 +88,15 @@ function sessionsSpeakersScheduleMap(sessionsRaw, speakersRaw, scheduleRaw) {
               speakers = Object.assign({}, speakers, updateSpeakersSessions(speakersRaw, subsession.speakers, finalSubsession, speakers));
             }
           }
-          let sessionStartGrid = getTimeslotMinutesFromStart(dayKey, day.timeslots[0].startTime, sessionEndTime) / 5;
-          let sessionEndGrid = getTimeslotMinutesFromStart(dayKey, day.timeslots[0].startTime, sessionStartTime) / 5 + 1;
-          let columnEnd = timeslot.welcome ? 5 : sessionsLen !== 1 ?
-            sessionIndex + 2 : Object.keys(extensions).length ? Object.keys(extensions)[0] :
-              tracksNumber + 1;
-
+          let sessionStartGrid = getTimeslotMinutesFromStart(dayKey, day.timeslots[0].startTime, sessionStartTime, unusedGrids);
+          let sessionEndGrid = getTimeslotMinutesFromStart(dayKey, day.timeslots[0].startTime, sessionEndTime, unusedGrids) - 1;
+          let columnEnd = sessionsLen !== 1 ?
+              sessionIndex + 2 :
+              Object.keys(extensions).length ? Object.keys(extensions)[0] : tracksNumber + 1;
+          if (timeslot.crossTrackSession && sessionEndGrid - sessionStartGrid > maxGridSize) {
+            unusedGrids += ((sessionEndGrid - sessionStartGrid) - maxGridSize);
+            sessionEndGrid = (sessionStartGrid + maxGridSize) - 1;
+          }
           const start = `${sessionStartGrid} / ${sessionIndex + 1}`;
           const end = `${sessionEndGrid} / ${columnEnd}`;
 
@@ -131,22 +139,21 @@ function sessionsSpeakersScheduleMap(sessionsRaw, speakersRaw, scheduleRaw) {
 }
 
 function getTimeDifference(date, startTime, endTime) {
-    const timezone = new Date().toString().match(/([A-Z]+[+-][0-9]+.*)/)[1];
-    const timeStart = new Date(date + ' ' + startTime + ' ' + timezone).getTime();
-    const timeEnd = new Date(date + ' ' + endTime + ' ' + timezone).getTime();
+    const timeStart = new Date(`${date} ${startTime}`).getTime();
+    const timeEnd = new Date(`${date} ${endTime}`).getTime();
     return timeEnd - timeStart;
 }
 
-function getTimeslotMinutesFromStart(date, startOfDay, startTime) {
-  const timeDayStart = new Date(0, 0, date, startOfDay.split(':')[0], startOfDay.split(':')[1]).getTime();
-  const timeTimeslotStart = new Date(0, 0, date, startTime.split(':')[0], startTime.split(':')[1]).getTime();
+function getTimeslotMinutesFromStart(date, startOfDay, startTime, unusedGrids) {
+  const timeDayStart = new Date(`${date} ${startOfDay}`).getTime();
+  const timeTimeslotStart = new Date(`${date} ${startTime}`).getTime();
   const millis = timeTimeslotStart - timeDayStart;
-  return millis / (1000 * 60);
+  const fromStart = Math.floor((millis / (1000 * 60))) - unusedGrids;
+  return fromStart <= 0 ? 1 : fromStart;
 }
 
 function getEndTime(date, startTime, endTime, totalNumber, number) {
-    const timezone = new Date().toString().match(/([A-Z]+[+-][0-9]+.*)/)[1];
-    const timeStart = new Date(`${date} ${startTime} ${timezone}`).getTime();
+    const timeStart = new Date(`${date} ${startTime}`).getTime();
     const difference = Math.floor(getTimeDifference(date, startTime, endTime) / totalNumber);
     const result = new Date(timeStart + difference * number);
     return result.getHours() + ':' + result.getMinutes();

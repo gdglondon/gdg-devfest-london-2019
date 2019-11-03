@@ -12,7 +12,7 @@
   <meta content="Project Hoverboard" name="generator">
 
   <title>{$ title $}</title>
-  <link rel="canonical" href="{$ appURL $}">
+  <link rel="canonical" href="{$ url $}">
 
   <link href="images/favicon.ico" rel="icon">
 
@@ -45,7 +45,7 @@
   <!-- G+ sharing meta data -->
   <meta content="{$ title $}" itemprop="name">
   <meta content="{$ description $}" itemprop="description">
-  <meta content="{$ image if image.startsWith('http') else (appURL + image) $}" itemprop="image">
+  <meta content="{$ image if image.startsWith('http') else (url + image) $}" itemprop="image">
   <meta content="{$ startDate $}" itemprop="startDate">
   <meta content="{$ endDate $}" itemprop="endDate">
 
@@ -56,7 +56,7 @@
   <meta content="{$ url $}" property="og:url">
   <meta content="{$ description $}" property="og:description">
   <meta content="Event" property="og:type">
-  <meta content="{$ image if image.startsWith('http') else (appURL + image) $}" property="og:image">
+  <meta content="{$ image if image.startsWith('http') else (url + image) $}" property="og:image">
   <meta content="image/jpeg" property="og:image:type" />
 
   <!-- Twitter meta data -->
@@ -64,7 +64,7 @@
   <meta content="@{$ organizer.twitter $}" name="twitter:creator">
   <meta content="{$ title $}" name="twitter:title">
   <meta content="{$ description $}" name="twitter:description">
-  <meta content="{$ image if image.startsWith('http') else (appURL + image) $}" name="twitter:image">
+  <meta content="{$ image if image.startsWith('http') else (url + image) $}" name="twitter:image">
   <meta name="twitter:label1" value="{$ location.label $}">
   <meta name="twitter:data1" value="{$ location.name $}">
   <meta name="twitter:label2" value="">

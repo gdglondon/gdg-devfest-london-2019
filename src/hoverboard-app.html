@@ -418,7 +418,7 @@
           this.$.header.classList.remove('remove-shadow');
         }
 
-        const canonicalLink = `{$ url $}${page}${subroutePath}`;
+        const canonicalLink = `{$ socialURL $}${page}${subroutePath}`;
         document.querySelector('link[rel="canonical"]').setAttribute('href', canonicalLink);
       }
 

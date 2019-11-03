@@ -30,7 +30,7 @@
           },
           _defaultImage: {
             type: String,
-            value: '{$ image if image.startsWith("http") else (url + image) $}',
+            value: '{$ image if image.startsWith("http") else (socialURL + image) $}',
           },
           _defaultLabel1: {
             type: String,
@@ -67,7 +67,7 @@
           const updatedData2 = data2 || this._defaultData2;
           let updatedImage = this._defaultImage;
           if (image) {
-            updatedImage = image.startsWith('http') ? image : `{$ url $}${image}`;
+            updatedImage = image.startsWith('http') ? image : `{$ socialURL $}${image}`;
           }
           document.title = updatedTitle;
           document.querySelector('meta[name="description"]').setAttribute('content', updatedDescription);

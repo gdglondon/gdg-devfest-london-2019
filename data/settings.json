@@ -57,6 +57,22 @@
       },
       "fontColor": "#424242"
     },
+    "speakers": {
+      "title": "Speakers",
+      "metaDescription": "Get more info about our speakers.",
+      "background": {
+        "color": "#fff"
+      },
+      "fontColor": "#424242"
+    },
+    "schedule": {
+      "title": "Shedule",
+      "metaDescription": "Get more info about the schedule.",
+      "background": {
+        "color": "#fff"
+      },
+      "fontColor": "#424242"
+    },
     "faq": {
       "title": "FAQs",
       "metaDescription": "Find your answer right here!",
